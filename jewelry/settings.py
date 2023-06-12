@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-$h^ab9uhex!a6%l^qgh3ugv#$_@orruq4he@q9ngpdx+toxp)y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'jewelry.urls'
 
@@ -123,6 +124,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+
 
 
 AUTH_USER_MODEL = 'jewelapp.User'

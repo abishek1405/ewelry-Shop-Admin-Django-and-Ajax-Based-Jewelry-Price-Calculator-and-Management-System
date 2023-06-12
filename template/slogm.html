@@ -1,4 +1,4 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-   
     <style>
       .navbar-brand{
         font-size: 30px;
@@ -19,54 +18,61 @@
         margin-right: 15px;
       }
       .navbar-brand{
-        margin-left: 190px;
+        margin-left: 100px;
       }
+      table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+
+thead {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: green;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+   
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+tfoot {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tfoot td {
+  border-top: 1px solid #ddd;
+}
+
+tfoot td:first-child {
+  border-top-left-radius: 5px;
+}
+
+tfoot td:last-child {
+  border-top-right-radius: 5px;
+}
     </style>
  
-
-<style>
-
-.gradient-button {
-  background: linear-gradient(to bottom, #6dd5fa, #2980b9);
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-.meg{
-          font-size: 20px;
-    }
-.jii{
-        color: blue;
-    }
-#pop{
-  background-color: white;
-}
-
-
-
-  
-
-</style>
- 
-<script>
-
-  setTimeout(() => {
-    const box = document.getElementById('box');
-    box.style.display = 'none';
-  }, 3000);
-</script>
-
 </head>    
 <body>
+  
+
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <div class="container-fluid">
     <a class="navbar-brand navbar-collapse justify-content-center text-white" href="#">JK</a>
@@ -77,30 +83,49 @@
   <div class="collapse navbar-collapse float-right" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active text-white" aria-current="page" href="/logout">Logout</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active text-white" aria-current="page" href="/student/signup/">User_create</a>
+        <a class="nav-link active text-white" aria-current="page" href="/slog">Back</a>
       </li>
     </ul>
   </div>
 </nav>
-
-
-<div class="container py-5">
-  <center><a href="/dail"><button class="gradient-button " type="button">Purchase</button></a><a href="/dailret"><button class="gradient-button " style="margin-left: 20px;" type="button">Master</button></a><a href="/sel"><button style="margin-left: 20px;" class="gradient-button " type="button">options</button></a></center>
-</div>
-
-  
+{% load static %}
 <br>
-<center>
-  {% block content %}
-  {%  for message in messages %}
-  <div class="alert alert-{{ message.tags }} alert-dismissible fade show border-light" id="pop" role = "alert">
-    <h1 id="box" class="meg"><strong>Message:</strong> <span class="jii">  {{ message }}</span></h1>
-  </div>
-  {% endfor %}
-  {% endblock %}
-  </center>
+
+<center><h1 style="color: rgb(38, 28, 228);">Master</h1></center>
+    <br>
+    <table>
+        <thead>
+          <tr>
+            
+            
+            <th>product_name</th>
+            <th>type_of_product</th>
+            <th>Date_of_purchase</th>
+            
+            <th>precious_metal</th>
+            <th>discount</th>
+            <th>pure_rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for st in ket %}
+
+            
+            
+            <td><center>{{st.product_name}}</center></td>
+            <td><center>{{st.type_of_product}}</center></td>
+            <td><center>{{st.created_at}}</center></td>
+            
+            <td><center>{{st.precious_metal}}</center></td>
+            <td><center>{{st.discount}}</center></td>
+            <td><center>{{st.pure_rate}}</center></td>     
+          </tr>
+          {% endfor %}
+          </tr>
+        </tbody>
+        
+      </table>
+
+
 </body>
-</html>

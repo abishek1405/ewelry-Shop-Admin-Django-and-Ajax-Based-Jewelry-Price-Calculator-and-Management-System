@@ -10,5 +10,13 @@ urlpatterns=[
     path('slog/',views.slog,name = 'slog'),
     path('tlog/',views.tlog,name = 'tlog'),
     path('logout/',views.logout,name = 'logout'),
-    path('reactapp/', views.reactapp, name='reactapp'),
+    path('dail/', views.dail, name='dail'),
+    path('dailret/', views.dret, name='dailret'),
+    path('upd/<id>/',views.upda),
+    path('del/<id>/',views.delete_view),
+    path('slogm/',views.slogm, name='slogm'),
+    path('sel/',views.seldail,name='sel'),
+    path('up/<id>/',views.up),
+    path('de/<id>/',views.de),
+
 ]

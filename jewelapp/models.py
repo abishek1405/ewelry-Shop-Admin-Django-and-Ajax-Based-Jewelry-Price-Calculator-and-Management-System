@@ -2,8 +2,33 @@ from django.db import models
 
 # Create your models here.
 from django.contrib.auth.models import AbstractUser
+from dateutil.parser import parse
+import datetime
 # Create your models here.
 
+class Dealer(models.Model):
+    name            = models.CharField(max_length=1000)
+    store_name      = models.CharField(max_length=1000)
+    contact         = models.CharField(max_length=2000)
+    product_name     = models.CharField(max_length=1000)
+    type_of_product   = models.CharField(max_length=2000)
+    created_at        = models.CharField(max_length=50)
+    product_quality    = models.CharField(max_length=1000)
+    precious_metal      = models.CharField(max_length=10)
+    discount             = models.CharField(max_length=10000)
+    percent         = models.CharField(max_length=30)
+    pure_rate           = models.CharField(max_length=10000)
+
+
+
+class Seldealer(models.Model):
+    sname            = models.CharField(max_length=1000)
+    sstore_name      = models.CharField(max_length=1000)
+    scommuni         = models.CharField(max_length=2000)
+    sproduct_name     = models.CharField(max_length=1000)
+    stype_of_product   = models.CharField(max_length=2000)
+    
+        
 
 class User(AbstractUser):
     is_student = models.BooleanField(default=False)

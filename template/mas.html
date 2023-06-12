@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .navbar-brand{
+        font-size: 30px;
+      }
+      #navbarNav{
+        margin-right: 15px;
+      }
+      .navbar-brand{
+        margin-left: 80px;
+      }
+    </style>
+ 
+
+<style>
+  
+  body {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+  
+  .it[type=text],[type=number],[type=date], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  .sl[type=text],  textarea {
+    width: 15%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .sum[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sum[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .containerr {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 60%;
+    margin-left: 20%
+  }
+  .sm{
+    display: inline-block;
+  }
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin-left: 20%;
+  
+}
+.gradient-button {
+  background: linear-gradient(to bottom, #6dd5fa, #2980b9);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+  </style>
+  <script>
+
+    setTimeout(() => {
+      const box = document.getElementById('box');
+      box.style.display = 'none';
+    }, 3000);
+  </script>
+  
+ 
+</head>    
+<body>
+  
+
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand navbar-collapse justify-content-center text-white" href="#">JK</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse float-right" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active text-white" aria-current="page" href="/tlog">Back</a>
+      </li>
+    </ul>
+  </div>
+</nav><br>
+<center><h1>Selection Options</h1></center><br>
+<center><a href="/dail"><button style="margin-left: 20px;" class="gradient-button " type="button"> Direirect to purchase </button></a></center><br>
+<center>
+  {% block content %}
+  {%  for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show border-light" id="pop" role = "alert">
+    <h1 id="box" class="meg"><strong>Message:</strong> <span class="jii">  {{ message }}</span></h1>
+  </div>
+  {% endfor %}
+  {% endblock %}
+  </center>
+{% load static %}
+<br>
+  <div class="containerr">
+    <form method="POST">
+      {% csrf_token %}
+      <label for="fname">Dealer Name</label>
+      <input class="it" type="text" id="sname" name="sname" placeholder="Ex: Raja,Ravi">
+
+      <label for="fname">Dealer Store Name</label>
+      <input class="it" type="text" id="sstore_name" name="sstore_name" placeholder="Ex: GRT">
+
+      <label for="fname">Dealer Contact</label>
+      <input class="it" type="text" id="scommuni" name="scommuni" placeholder="Ex: 9876543210">
+  
+      <label for="lname">Product Name</label>
+      <input class="it" type="text" id="sproduct_name" name="sproduct_name" placeholder="Ex: Bracelets, Bridal Jewellery, Fashion Jewellery, Filigree Jewellery.">
+
+      <label >Type of Product</label>
+      <input class="it" type="text" id="stype_of_product" name="stype_of_product" placeholder="Ex: Charm Bracelets, Gemstone Bracelets, Link Bracelets.">
+      
+      <center><input class="sum" type="submit"  value="Submit"> </center>
+    </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <center><h1>Data About Dealers</h1></center><br>
+  {% if ket %}
+  <table>
+    <thead>
+      <th>Dealer Name</th>
+      <th>Dealer Store Name</th>
+      <th>Dealer Contact</th>
+      <th>Product Name</th>
+      <th>Type of Product</th>
+      <th>Edit Option</th>
+    </thead>
+    <tbody>
+    {% for x in ket %}
+    <tr>
+      <td>{{x.sname}}</td>
+      <td>{{x.sstore_name}}</td>
+      <td>{{x.scommuni}}</td>
+      <td>{{x.sproduct_name}}</td>
+      <td>{{x.stype_of_product}}</td>
+      <td> <center>    
+        <a href="/up/{{x.id}}"><button style="display: inline-block;" class="btn"><i class="fa fa-edit"></i></button> </a>
+        <a href="/de/{{x.id}}"><button style="display: inline-block;" class="btn"><i class="fa fa-trash"></i></button></a>
+        </center>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+  {% else %}
+  <table>
+    <thead>
+      <th>---------------------------No Datas Found--------------------------</th>
+    </thead>
+  </table>
+  {% endif %}
+
+<br><br><br>
+</body>
+</html>

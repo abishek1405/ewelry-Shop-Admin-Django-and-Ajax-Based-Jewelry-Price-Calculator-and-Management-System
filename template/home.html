@@ -1,146 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    
-   <style>
-  @media screen and (max-width: 592px) {
- 
-.n{
-  display: none;
 
-}
-.navbar-brand{
-  font-size: 70%;
-}
-.float-start{
-width: 120px;
-font-size: 5px;
-text-align: center;
-}
-#ps{
-  font-size: 12px;
-}
-.text-primary{
-  font-size: 16px;
-}
-}
-
-
-   </style>
-</head>
-<body>
- 
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="n" src="https://pmu.edu/site-assets/images/new-logo1.jpg" alt="" width="150" height="44">&nbsp; Department Of Software Engineering</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse ms-auto" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Time table</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="ghg">Faculty Login</a>
-            
-
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active " href="login"  role="button"  aria-expanded="true"> Student Login
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <br><br>
-        <h1 class="text-primary">THINK . INNOVATE . TRANSFORM</h1><br>
-        <div class="d-flex justify-content-center align-items-center">
-          <div>
-            <div class="mx-auto" style="max-width: 70%; text-align: justify; font-size: 22px;">
-            <p id="ps" > Pursue your career defining degree from PMIST (Periyar Maniammai Institute of Science & Technology), a reputed Deemed to be University with finest professional and supportive environment. With over 100 plus industry tie-ups, 100% placement assistance and value added certificate programs, be rest assured for a promising future. PMIST imparts quality education, value added certification courses for better employment opportunities, ICT enabled classrooms, well-equipped library that shelves over 90,000 books & research journals, well-equipped laboratories and a fleet of highly qualified faculty members to provide an excellent academic environment that enables its students to Think, Innovate and Transform.</p>
-            
-  {% load static %}
-  
-  <div class="container" style="max-width: 100%;">
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="Image 1">
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="{% static 'images/2.jpg' %}" class="card-img-top" alt="Image 2">
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="{% static 'images/3.jpg' %}" class="card-img-top" alt="Image 3">
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="{% static 'images/4.jpg' %}" class="card-img-top" alt="Image 4">
-        </div>
-      </div>
-    </div>
-  </div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
- 
- 
-  
-  <!--Main layout-->
-  <!--
-  <main style="margin-top: 58px;">
-    <div class="container pt-4"></div>
-  </main>
-  
-</div>
-
-
-
-<footer class="bg-primary text-white text-center py-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <p class="mb-0">PMIST College, Thanjavur</p>
-        <p class="mb-0">123 Main Street</p>
-        <p class="mb-0">Thanjavur, Tamil Nadu</p>
-        <p class="mb-0">613005</p>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <a href="#" class="me-3 text-white text-decoration-none">Privacy Policy</a>
-        <a href="#" class="text-white text-decoration-none">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-  
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,6 +13,7 @@ text-align: center;
     <style>
       .navbar-brand{
         font-size: 30px;
+        margin-left: 185px;
       }
       #navbarNav{
         margin-right: 15px;
@@ -166,7 +25,7 @@ text-align: center;
 
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <div class="container-fluid">
-    <a class="navbar-brand navbar-collapse justify-content-center text-white" href="#">Brand</a>
+    <a class="navbar-brand navbar-collapse justify-content-center text-white" href="/"><span style="color: rgb(168, 9, 9); font-size: 30px;">J</span><samp style="color: rgb(236, 236, 7);">K</samp></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -184,11 +43,11 @@ text-align: center;
 </nav>
 {% load static %}
 <div class="container py-5">
-  <h1 class="text-center mb-4">Welcome to [Your Shop Name]</h1>
+  <h1 class="text-center mb-4">Welcome to JK Jewellery </h1>
   <div class="row">
     <div class="col-md-6">
       <p class="lead">We are a [description of your shop - for example, "family-owned and operated jewelry boutique"] that specializes in [types of jewelry you sell - for example, "handcrafted sterling silver jewelry with unique gemstone accents"]. Our goal is to provide you with high-quality jewelry that is not only beautiful but also timeless.</p>
-      <p class="mb-4">At [Your Shop Name], we understand that jewelry is more than just an accessory - it's a way to express your personal style and make a statement. That's why we take pride in offering a wide selection of pieces that are as unique and individual as you are. Whether you're looking for a classic piece to wear every day or a show-stopping statement necklace for a special occasion, we've got you covered.</p>
+      <p class="mb-4">At <span style="color: rgb(168, 9, 9); ">J</span><samp style="color: rgb(8, 152, 39);">K</samp>, we understand that jewelry is more than just an accessory - it's a way to express your personal style and make a statement. That's why we take pride in offering a wide selection of pieces that are as unique and individual as you are. Whether you're looking for a classic piece to wear every day or a show-stopping statement necklace for a special occasion, we've got you covered.</p>
       <p class="mb-4">Our jewelry is crafted from the highest-quality materials, including [list some of the materials you use - for example, "sterling silver, 14k gold, and genuine gemstones"]. We believe in using only the best materials so that your jewelry will last for years to come. We also offer customization options so that you can create a piece that is truly one-of-a-kind.</p>
     </div>
     <div class="col-md-6">
@@ -198,14 +57,14 @@ text-align: center;
   <div class="row">
     <div class="col-md-6">
       <p class="mb-4">In addition to our selection of jewelry, we are committed to providing exceptional customer service. Our knowledgeable staff is here to answer any questions you may have and help you find the perfect piece. We also offer free shipping on all orders and a hassle-free return policy, so you can shop with confidence.</p>
-      <p>Thank you for choosing [Your Shop Name]. We look forward to helping you find the perfect piece of jewelry that you'll cherish for years to come.</p>
+      <p>Thank you for choosing <span style="color: rgb(168, 9, 9);">J</span><samp style="color: rgb(8, 152, 39);">K</samp>. We look forward to helping you find the perfect piece of jewelry that you'll cherish for years to come.</p>
     </div>
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
           <h3 class="card-title">Customer Reviews</h3>
-          <p class="card-text">"I absolutely love the earrings I purchased from [Your Shop Name]. They're so unique and the quality is amazing!"</p>
-          <p class="card-text">"I had a necklace custom-made and it turned out even better than I imagined. Thank you [Your Shop Name]!"</p>
+          <p class="card-text">"I absolutely love the earrings I purchased from <span style="color: rgb(168, 9, 9);">J</span><samp style="color: rgb(8, 152, 39);">K</samp>. They're so unique and the quality is amazing!"</p>
+          <p class="card-text">"I had a necklace custom-made and it turned out even better than I imagined. Thank you !"</p>
         </div>
       </div>
     </div>
